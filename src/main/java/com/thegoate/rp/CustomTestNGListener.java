@@ -7,11 +7,12 @@ import rp.com.google.common.base.Suppliers;
 
 public class CustomTestNGListener extends BaseTestNGListener {
 
+    static final ReportPortalTestNGService service = new ReportPortalTestNGService();
     /* static instance with lazy init */
     public static final Supplier<ITestNGService> SERVICE = Suppliers.memoize(new Supplier<ITestNGService>() {
         @Override
         public ITestNGService get() {
-            return new ReportPortalTestNGService();
+            return service;
         }
     });
 

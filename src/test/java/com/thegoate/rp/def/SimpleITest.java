@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-@Listeners({CustomTestNGListener.class})
+//@Listeners({CustomTestNGListener.class})
 public class SimpleITest extends TestNGEngineMethodDL {
 
     @GoateDLP(name = "simple data")

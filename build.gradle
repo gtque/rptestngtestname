@@ -119,7 +119,7 @@ allprojects {
         testCompile 'ch.qos.logback:logback-access:1.2.3'
         testCompile 'ch.qos.logback:logback-core:1.2.3'
         testCompile 'org.codehaus.janino:janino:2.7.8'
-        compile 'com.epam.reportportal:agent-java-testng:5.0.7'
+        compile 'com.epam.reportportal:agent-java-testng:5.0.8'
         testCompile 'com.epam.reportportal:logger-java-logback:5.0.3'
         annotationProcessor 'org.atteo.classindex:classindex:3.6'
         testAnnotationProcessor 'org.atteo.classindex:classindex:3.6'
@@ -146,6 +146,12 @@ allprojects {
     idea {
         module {
             scopes.PROVIDED.plus += [configurations.annotations]
+        }
+    }
+
+    test{
+        useTestNG() {
+            listeners << 'com.thegoate.rp.CustomTestNGListener'
         }
     }
 }

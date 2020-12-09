@@ -35,6 +35,7 @@
     </triggeringPolicy>
   </appender>
 
+  <logger name="com.epam.reportportal" level="DEBUG"/>
   <logger name="com.thegoate" level="DEBUG"/>
   <logger name="com.thegoate.annotations.AnnotationFactory" level="INFO"/>
   <logger name="com.thegoate.json.logging.volume" level="ERROR"/>

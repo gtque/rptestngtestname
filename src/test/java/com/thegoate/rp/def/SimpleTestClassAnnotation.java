@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-@Listeners({CustomTestNGListener.class})
+//@Listeners({CustomTestNGListener.class})
 @Test(testName = "Test Name Set for the class, only makes sense if only one test method, but whatever.")
 public class SimpleTestClassAnnotation {
 
